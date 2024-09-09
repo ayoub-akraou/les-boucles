@@ -19,17 +19,19 @@ int main()
 {
     int n;
     int left_margin;
+    
     scanf("%d", &n);
-    for(int i = 1; i < n; i++) {
+    for(int i = 1; i <= n; i++) {
         left_margin = n - i + 1;
         for(int j = 1; j <= n; j++) {
-                // printf("j: %d\nleft_margin: %d\n", j, left_margin);
-            if(j < left_margin) {
-                printf(" ");
-            } else {
-                printf("*");
-            }
+            if(j < left_margin) printf(" ");
+            else printf("*");
         }
+        
+        for(int j = 1; j < i; j++) {
+            printf("*");
+        }
+        
         printf("\n");
     }
 
